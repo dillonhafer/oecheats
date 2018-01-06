@@ -1,6 +1,6 @@
 # OpenEmu Cheats
 
-This is a tool to manage the OpenEmu cheats database
+:joystick::shark: This is a tool to manage the OpenEmu cheats database
 
 ## Installation
 
