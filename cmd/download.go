@@ -21,7 +21,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"path"
 	"strconv"
 	"time"
 
@@ -38,8 +37,6 @@ you install or update OpenEmu. This will also update
 OpenEmu to have the latest cheats if you've already run
 this command.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		remoteDbLocation := "https://gist.githubusercontent.com/dillonhafer/8399eb1926e2af9164470ad45da67a57/raw/dd119b94daf73f46a8d3a0c73f7783c09a83215b/cheats-database.xml"
-		openEmuDbLocation := "/Applications/OpenEmu.app/Contents/Resources"
 		DownloadFile(remoteDbLocation, openEmuDbLocation)
 	},
 }
@@ -100,7 +97,7 @@ func PrintDownloadPercent(done chan int64, path string, total int64) {
 
 func DownloadFile(url string, dest string) {
 
-	file := path.Base(url)
+	file := "cheats-database.xml"
 
 	log.Printf("Downloading database from: \n%s\n", color.HiBlueString(url))
 

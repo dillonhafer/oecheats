@@ -25,6 +25,10 @@ import (
 
 var cfgFile string
 
+var gistId = "8399eb1926e2af9164470ad45da67a57"
+var remoteDbLocation = fmt.Sprintf("https://gist.github.com/dillonhafer/%s/raw", gistId)
+var openEmuDbLocation = "/Applications/OpenEmu.app/Contents/Resources"
+
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "oecheats",
